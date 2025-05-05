@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Cakeup Kafejnīca - Kontakti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: rgba(255, 255, 255, 0.6);
+      --text: #ffffff;
+      --bg-dark: #000000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-page {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .contact-page h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-page p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-links a {
+      font-size: 2rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-page">
+    <h1>Kontakti</h1>
+    <p><strong>Adrese:</strong> Brīvības iela 123, Rīga</p>
+    <p><strong>Telefons:</strong> +371 0000 0000</p>
+    <p><strong>Email:</strong> info@cakeup.lv</p>
+
+    <div class="social-links">
+      <!-- Instagram link -->
+      <a href="https://www.instagram.com/cakeup_marupe/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40" height="40">
+      </a>
+
+      <!-- Facebook link -->
+      <a href="https://www.facebook.com/profile.php?id=100095247367979" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="40" height="40">
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Cakeup Kafejnīca</p>
+  </footer>
+
+</body>
+</html>

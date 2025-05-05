@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Cakeup Dzērienkarte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #ffe4ec, #fff8f0);
+      margin: 0;
+      padding: 0;
+      color: #2c2c2c;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .language-switcher {
+      display: flex;
+      gap: 10px;
+      margin-right: 10px;
+    }
+
+    .language-switcher img {
+      width: 30px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .drink-section {
+      margin-bottom: 40px;
+    }
+
+    .drink-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #d9488a;
+    }
+
+    .drink-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #ccc;
+      padding: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .drink-item span {
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #d9488a;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: #a41656;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="page-title">Dzērienkarte</h1>
+    <div class="language-switcher">
+      <img src="https://flagcdn.com/w40/lv.png" alt="Latviešu" onclick="setLanguage('lv')" />
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLanguage('en')" />
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="drink-section">
+      <h2 id="hot-drinks-title">Karstie dzērieni</h2>
+      <div class="drink-item"><span id="espresso">Espresso</span><span>2.00€</span></div>
+      <div class="drink-item"><span id="latte">Latte</span><span>3.00€</span></div>
+      <div class="drink-item"><span id="cappuccino">Cappuccino</span><span>3.00€</span></div>
+      <div class="drink-item"><span id="black-tea">Melna tēja</span><span>2.50€</span></div>
+      <div class="drink-item"><span id="green-tea">Zaļā tēja</span><span>2.50€</span></div>
+      <div class="drink-item"><span id="hot-chocolate">Karstā šokolāde</span><span>3.50€</span></div>
+    </div>
+
+    <div class="drink-section">
+      <h2 id="cold-drinks-title">Aukstie dzērieni</h2>
+      <div class="drink-item"><span id="lemonade">Limonāde (pašu gatavota)</span><span>3.00€</span></div>
+      <div class="drink-item"><span id="water">Minerālūdens</span><span>1.50€</span></div>
+      <div class="drink-item"><span id="iced-coffee">Ledus kafija</span><span>3.50€</span></div>
+      <div class="drink-item"><span id="juice">Sula (ābolu, apelsīnu)</span><span>2.00€</span></div>
+    </div>
+
+    <div class="drink-section">
+      <h2 id="alcohol-title">Alkoholiski dzērieni</h2>
+      <div class="drink-item"><span id="prosecco">Prosecco</span><span>4.50€</span></div>
+      <div class="drink-item"><span id="wine">Vīns (baltais / sarkanais)</span><span>4.00€</span></div>
+      <div class="drink-item"><span id="cocktail">Kokteilis "Cakeup Special"</span><span>5.50€</span></div>
+    </div>
+
+    <a href="index.html#dzērienkarte" class="back-link" id="back-link">← Atpakaļ uz galveno lapu</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Cakeup Kafejnīca. Visas tiesības aizsargātas.
+  </footer>
+
+  <script>
+    const translations = {
+      lv: {
+        "page-title": "Dzērienkarte",
+        "hot-drinks-title": "Karstie dzērieni",
+        "cold-drinks-title": "Aukstie dzērieni",
+        "alcohol-title": "Alkoholiski dzērieni",
+        "espresso": "Espresso",
+        "latte": "Latte",
+        "cappuccino": "Cappuccino",
+        "black-tea": "Melna tēja",
+        "green-tea": "Zaļā tēja",
+        "hot-chocolate": "Karstā šokolāde",
+        "lemonade": "Limonāde (pašu gatavota)",
+        "water": "Minerālūdens",
+        "iced-coffee": "Ledus kafija",
+        "juice": "Sula (ābolu, apelsīnu)",
+        "prosecco": "Prosecco",
+        "wine": "Vīns (baltais / sarkanais)",
+        "cocktail": "Kokteilis \"Cakeup Special\"",
+        "back-link": "← Atpakaļ uz galveno lapu"
+      },
+      en: {
+        "page-title": "Drink Menu",
+        "hot-drinks-title": "Hot Drinks",
+        "cold-drinks-title": "Cold Drinks",
+        "alcohol-title": "Alcoholic Beverages",
+        "espresso": "Espresso",
+        "latte": "Latte",
+        "cappuccino": "Cappuccino",
+        "black-tea": "Black Tea",
+        "green-tea": "Green Tea",
+        "hot-chocolate": "Hot Chocolate",
+        "lemonade": "Lemonade (homemade)",
+        "water": "Mineral Water",
+        "iced-coffee": "Iced Coffee",
+        "juice": "Juice (apple, orange)",
+        "prosecco": "Prosecco",
+        "wine": "Wine (white / red)",
+        "cocktail": "Cocktail \"Cakeup Special\"",
+        "back-link": "← Back to main page"
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem("lang", lang);
+      const t = translations[lang];
+      for (let key in t) {
+        const el = document.getElementById(key);
+        if (el) el.innerText = t[key];
+      }
+      document.documentElement.lang = lang;
+    }
+
+    function getLanguageFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("lang");
+    }
+
+    function initLanguage() {
+      const urlLang = getLanguageFromUrl();
+      const storedLang = localStorage.getItem("lang");
+      const lang = urlLang || storedLang || "lv";
+      setLanguage(lang);
+    }
+
+    initLanguage();
+  </script>
+
+</body>
+</html>
+
